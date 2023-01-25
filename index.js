@@ -47,8 +47,9 @@ app.get("/pagar", async function (req,res){
 
 app.post("/",(req,res) => {
     console.log(req.query);
+    res.send("OK")
 })
-app.listen(4000,function(error){
+app.listen(80,function(error){
     if(error){
         console.log("Erro detectado");
     }else{

@@ -36,7 +36,8 @@ app.get("/pagar", async function (req,res){
 
     try{
         var pagamento = await mercardoPago.preferences.create(dados);
-        console.log(pagamento);
+        // console.log(pagamento);
+        console.log(pagamento.body.id);
 
         return res.redirect(pagamento.body.init_point);
     }catch(err){
